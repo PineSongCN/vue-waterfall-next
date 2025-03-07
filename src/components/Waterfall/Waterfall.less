@@ -1,0 +1,37 @@
+.ui-waterfall {
+    width: 100%;
+    overflow-y: auto;
+    position: relative;
+
+    .ui-waterfall-slot-box {
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    &.is-transition {
+        img {
+            opacity: 0;
+            &.animation {
+                animation: 0.4s lazy-animation linear;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+    :deep(.ui-waterfall-column) {
+        float: left;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@keyframes lazy-animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "name": "vue-waterfall-next",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "dist/waterfall.umd.js",
+    "module": "dist/waterfall.es.js",
+    "types": "dist/waterfall.es.d.ts",
+    "homepage": "https://github.com/PineSongCN/vue-waterfall-next",
+    "bugs": "https://github.com/PineSongCN/vue-waterfall-next/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/PineSongCN/vue-waterfall-next.git"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "run-p type-check \"build-only {@}\" --",
+        "preview": "vite preview",
+        "build-only": "vite build",
+        "type-check": "vue-tsc --build",
+        "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
+        "lint:eslint": "eslint . --fix",
+        "lint": "run-s lint:*",
+        "format": "prettier --write src/"
+    },
+    "peerDependencies": {
+        "vue": "^3.5.13"
+    },
+    "devDependencies": {
+        "@tsconfig/node22": "^22.0.0",
+        "@types/mockjs": "^1.0.10",
+        "@types/node": "^22.13.4",
+        "@vitejs/plugin-vue": "^5.2.1",
+        "@vitejs/plugin-vue-jsx": "^4.1.1",
+        "@vue/eslint-config-prettier": "^10.2.0",
+        "@vue/eslint-config-typescript": "^14.4.0",
+        "@vue/tsconfig": "^0.7.0",
+        "eslint": "^9.20.1",
+        "eslint-plugin-oxlint": "^0.15.10",
+        "eslint-plugin-vue": "^9.32.0",
+        "jiti": "^2.4.2",
+        "less": "^4.2.2",
+        "mockjs": "^1.1.0",
+        "npm-run-all2": "^7.0.2",
+        "oxlint": "^0.15.10",
+        "prettier": "^3.5.1",
+        "typescript": "~5.7.3",
+        "vite": "^6.1.0",
+        "vite-plugin-css-injected-by-js": "^3.5.2",
+        "vite-plugin-dts": "^4.5.3",
+        "vite-plugin-vue-devtools": "^7.7.2",
+        "vue-tsc": "^2.2.2"
+    }
+}
